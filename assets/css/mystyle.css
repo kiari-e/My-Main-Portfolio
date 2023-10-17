@@ -411,6 +411,11 @@ img{
     transition: .4s;
 }
 
+.skills__list{
+    row-gap: 1.5rem;
+    padding-left: 2.7rem;
+}
+
 .skills__titles{
     display: flex;
     justify-content: space-between;
@@ -419,5 +424,53 @@ img{
 
 .skills__name{
     font-size: var(--normal-font-size);
-    font-weight: var(--font-medium);
+    font-weight: var(--font-medium)k;
+}
+
+.skills__bar,
+.skills__percantage{
+    height: 5px;
+    border-radius: .25rem;
+}
+
+.skills__bar{
+    background-color: var(--first-color-lighter);
+}
+
+.skills__percantage{
+    display: block;
+    background-color: var(--first-color);
+}
+
+.skills__html{
+    width: 90%;
+}
+.skills__css{
+    width: 80%;
+}
+.skills__react{
+    width: 50%;
+}
+.skills__js{
+    width: 70%;
+}
+.skills__laravel{
+    width: 70%;
+}
+.skills__php{
+    width: 65%;
+}
+
+.skills__close .skills__list{
+    height: 0;
+    overflow: hidden;
+}
+
+.skills__open .skills__list{
+    height: max-content;
+    margin-bottom: var(--mb-2-5);
+}
+
+.skills__open .skills__arrow{
+    transform: rotate(180deg);
 }
