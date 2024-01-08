@@ -71,7 +71,7 @@ tabs.forEach(tab =>{
 })
 
 // ==========================Swiper Js============================
-let swiper = new Swiper(".portfolio__container", {
+let swiperPortfolio = new Swiper(".portfolio__container", {
     cssMode: true,
     loop: true,
 
@@ -86,6 +86,27 @@ let swiper = new Swiper(".portfolio__container", {
     // mousewheel: true,
     // keyboard: true,
 }); 
+
+// ==========================Testimonial============================
+let swiperTestimonial = new Swiper(".testimonial__container", {
+    // cssMode: true,
+    loop: true,
+    grabCursor: true,
+    spaceBetween: 48,
+
+    pagination: {
+      el: ".swiper-pagination",
+      clickable: true,
+      dynamicBullets: true,
+    },
+    breakpoints:{
+        568:{
+            slidesPerView: 2,
+        }
+    }
+    // mousewheel: true,
+    // keyboard: true,
+});
 
 //================ SCROLL SECTIONS ACTIVE LINKS =================
 const sections = document.querySelectorAll('section[id]')
@@ -115,4 +136,12 @@ function scrollHeader(){
 }
 window.addEventListener('scroll', scrollHeader)
 
-//================ Scroll Top =================
+//================ Show Scroll Up =================
+function scrollUp(){
+    const scrollUp = document.getElementById('scroll-up');
+    // When the scroll is higher than 560 viewport height, add the show-scroll class to the a tag with the scroll-top class
+    if(this.scrollY >= 560) scrollUp.classList.add('show-scroll'); else scrollUp.classList.remove('show-scroll')
+}
+window.addEventListener('scroll', scrollUp)
+
+//================ Dark - Light Theme =================

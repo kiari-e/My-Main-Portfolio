@@ -616,6 +616,42 @@ right: -.5rem;
     outline: none;
 }
 
+/* ====================Testimonial====================== */
+.testimonial__data,
+.testimonial__header{
+    display: flex;
+}
+
+.testimonial__data{
+    justify-content: space-between;
+    margin-bottom: var(--mb-2);
+}
+
+.testimonial__img{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: var(--mb-0-75);
+}
+
+.testimonial__name{
+    font-size: var(--h3-font-size);
+    font-weight: var(--font-medium);
+}
+
+.testimonial__client{
+    font-size: var(--small-font-size);
+    color: var(--text-color-light);
+}
+
+.testimonial__description{
+    margin-bottom: var(--mb-2-5);
+}
+
+.swiper-container .swiper-pagination-testimonial{
+    bottom: 0;
+}
+
 /* ====================Contact Me====================== */
 .contact__container{
     row-gap: 3rem;
@@ -718,4 +754,31 @@ right: -.5rem;
 .footer__link,
 .footer__social{
     color: #FFF;
+}
+
+/* ====================Scroll Up====================== */
+.scrollup{
+    position: fixed;
+    right: 1rem;
+    bottom: -20%;
+    background-color: var(--first-color);
+    opacity: .8;
+    padding: 0 .3rem;
+    border-radius: .4rem;
+    z-index: var(--z-tooltip);
+    transition: .4s;
+}
+
+.scrollup:hover{
+    background-color: var(--first-color-alt);
+}
+
+.scrollup__icon{
+    font-size: 1.5rem;
+    color: #FFF;
+}
+
+/* ------------Show Scroll------------ */
+.show-scroll{
+    bottom: 5rem;
 }
