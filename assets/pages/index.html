@@ -195,11 +195,7 @@
                                     <h3 class="skills__name">
                                         <i class="fab fa-html5 skills__icon"></i> <br>
                                         HTML</h3>
-                                    <span class="skills__number">90%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percantage skills__html"></span>
-                                </div>
+                                </div>         
                             </div>
 
                             <div class="skills__data">
@@ -207,10 +203,6 @@
                                     <h3 class="skills__name">
                                         <i class="fab fa-css3 skills__icon"></i> <br>
                                         CSS</h3>
-                                    <span class="skills__number">90%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percantage skills__css"></span>
                                 </div>
                             </div>
 
@@ -219,10 +211,6 @@
                                     <h3 class="skills__name">
                                         <i class="fab fa-js-square skills__icon"></i> <br>
                                         JavaSript</h3>
-                                    <span class="skills__number">90%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percantage skills__js"></span>
                                 </div>
                             </div>
 
@@ -231,10 +219,6 @@
                                     <h3 class="skills__name">
                                         <i class="fab fa-react skills__icon"></i> <br>
                                         React Js</h3>
-                                    <span class="skills__number">90%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percantage skills__react"></span>
                                 </div>
                             </div>
 
@@ -243,10 +227,6 @@
                                     <h3 class="skills__name">
                                         <i class="fab fa-php skills__icon"></i> <br>
                                         Php</h3>
-                                    <span class="skills__number">90%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percantage skills__php"></span>
                                 </div>
                             </div>
 
@@ -255,10 +235,6 @@
                                     <h3 class="skills__name">
                                         <i class="fab fa-laravel skills__icon"></i> <br>
                                         Laravel</h3>
-                                    <span class="skills__number">90%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percantage skills__laravel"></span>
                                 </div>
                             </div>
 
@@ -267,10 +243,6 @@
                                     <h3 class="skills__name">
                                         <i class="fas fa-database skills__icon"></i> <br>
                                         SQL</h3>
-                                    <span class="skills__number">90%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percantage skills__php"></span>
                                 </div>
                             </div>
                         </div>
@@ -297,10 +269,6 @@
                                     <h3 class="skills__name">
                                         <i class="fas fa-mobile skills__icon"></i> <br>
                                         Mobile App Development</h3>
-                                    <span class="skills__number">90%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percantage skills__mobileapp"></span>
                                 </div>
                             </div>
 
@@ -309,10 +277,6 @@
                                     <h3 class="skills__name">
                                         <i class="fas fa-robot skills__icon"></i> <br>
                                         Robotics</h3>
-                                    <span class="skills__number">90%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percantage skills__robotics"></span>
                                 </div>
                             </div>
 
@@ -321,10 +285,6 @@
                                     <h3 class="skills__name">
                                         <i class="fas fa-microchip skills__icon"></i> <br>
                                         Arduino (C++)</h3>
-                                    <span class="skills__number">90%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percantage skills__arduino"></span>
                                 </div>
                             </div>
 
@@ -333,10 +293,6 @@
                                     <h3 class="skills__name">
                                         <i class="fas fa-code skills__icon"></i> <br>
                                         Creative Coding </h3>
-                                    <span class="skills__number">90%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percantage skills__scratch"></span>
                                 </div>
                             </div>
 
@@ -345,14 +301,11 @@
                                     <h3 class="skills__name">
                                         <i class="fas fa-cubes skills__icon"></i> <br>
                                         3D Design </h3>
-                                    <span class="skills__number">90%</span>
-                                </div>
-                                <div class="skills__bar">
-                                    <span class="skills__percantage skills__3d"></span>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    
                     
                 </div>
             </div>
@@ -684,7 +637,7 @@
                     </div>
 
                     <div>
-                        <button onclick="SendMail()" class="button button--flex" >Send Message</button>
+                        <button onclick="SendMail(); reset();" class="button button--flex" >Send Message</button>
                         <!-- <a href="" class="button button--flex" id="btn" onclick="SendMail()">
                             Send Message
                             <i class="uil uil-message button__icon"></i>
@@ -713,7 +666,7 @@
                         <a href="#portfolio" class="footer__link">Projects</a>
                     </li>
                     <li>
-                        <a href="#contact" class="footer__link">Contact Me</a>
+                        <a href="#contact" class="footer__link">Contact</a>
                     </li>
                 </ul>
 
@@ -734,7 +687,7 @@
                 </div>
             </div>
 
-            <!-- <p class="footer__copy">&#169; BrandonInc. All rights reserved</p> -->
+            <p class="footer__copy">&#169; 2024 | Brandon Kiarie | All rights reserved</p>
         </div>
     </footer>
 
@@ -770,7 +723,7 @@ function SendMail(){
         message : document.getElementById("message").value
     }
     emailjs.send("service_u3xmngi", "template_c4x5his", params).then(function (res){
-        alert("Success!");
+        alert("Your message has been sent");
     })
 }
 </script>

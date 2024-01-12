@@ -455,6 +455,8 @@ img{
 .skills__list{
   row-gap: 1.5rem;
   padding-left: 2.7rem;
+  grid-template-columns: repeat(2, 1fr);
+
 }
 
 .skills__titles{
@@ -483,24 +485,6 @@ img{
   background-color: var(--first-color);
 }
 
-.skills__html{
-  width: 90%;
-}
-.skills__css{
-  width: 80%;
-}
-.skills__react{
-  width: 50%;
-}
-.skills__js{
-  width: 70%;
-}
-.skills__laravel{
-  width: 70%;
-}
-.skills__php{
-  width: 65%;
-}
 .skills__close .skills__list{
   height: 0;
   overflow: hidden;
