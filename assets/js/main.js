@@ -173,3 +173,21 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
+
+// Send Email
+// (function() {
+//     // https://dashboard.emailjs.com/admin/account
+//     emailjs.init('3b4OhSe3s7DE-GXIO');
+// })();
+
+// function SendMail(){
+//     var params = {
+//         name: document.getElementById("name").value,
+//         email: document.getElementById("email").value,
+//         project: document.getElementById("project").value,
+//         message: document.getElementById("message").value
+//     }
+//     emailjs.send("service_u3xmngi", "template_c4x5his", params).then(function (res){
+//         alert("Success!" + res.status);
+//     })
+// }

@@ -75,15 +75,15 @@
             <div class="home__container container grid">
                 <div class="home__content grid">
                     <div class="home__social">
-                        <a href="" class="home__social-icon" target="_blank">
+                        <a href="https://ke.linkedin.com/in/brandon-kiarie-067913277" class="home__social-icon" target="_blank">
                             <i class="uil uil-linkedin-alt"></i>
                         </a>
 
-                        <a href="" class="home__social-icon" target="_blank">
+                        <a href="https://github.com/kiari-e" class="home__social-icon" target="_blank">
                             <i class="uil uil-github-alt"></i>
                         </a>
 
-                        <a href="" class="home__social-icon" target="_blank">
+                        <a href="https://www.instagram.com/brandon_kuria11" class="home__social-icon" target="_blank">
                             <i class="uil uil-instagram"></i> 
                         </a>
                     </div>
@@ -539,7 +539,7 @@
                     <div class="testimonial__content swiper-slide">
                         <div class="testimonial__data">
                             <div class="testimonial__header">
-                                <img src="../images/Brandon.jpeg" alt="" class="testimonial__img">
+                                <img src="../images/Brian.jpg" alt="" class="testimonial__img">
 
                                 <div>
                                     <h3 class="testimonial__name">Brian Davis</h3>
@@ -558,7 +558,7 @@
                     <div class="testimonial__content swiper-slide">
                         <div class="testimonial__data">
                             <div class="testimonial__header">
-                                <img src="../images/Brandon.jpeg" alt="" class="testimonial__img">
+                                <img src="../images/Magu.jpg" alt="" class="testimonial__img">
 
                                 <div>
                                     <h3 class="testimonial__name">Alex Magu</h3>
@@ -568,9 +568,8 @@
                         </div>
 
                         <p class="testimonial__description">
-                            Had the pleasure of working with a Brandon to develop my website.
-                            From initial consultation to the final product he demonstrated professionalism and creativity as he 
-                            understood my vision by transforming my ideas into a sleek and functional web application.
+                           Working with Brandon was a game changer for our online presence. He brought my ideas to life with precision 
+                           and creativity while adding a touch of innovation to really surpass our expectations.
                         </p>
                     </div>
 
@@ -578,7 +577,7 @@
                     <div class="testimonial__content swiper-slide">
                         <div class="testimonial__data">
                             <div class="testimonial__header">
-                                <img src="../images/Brandon.jpeg" alt="" class="testimonial__img">
+                                <img src="../images/Kiragu.jpg" alt="" class="testimonial__img">
 
                                 <div>
                                     <h3 class="testimonial__name">Sam Kiragu</h3>
@@ -635,32 +634,33 @@
                     </div>
                 </div>
 
-                <form action="" class="contact__form grid">
+                <form class="contact__form grid" onsubmit="sendEmail(); reset(); return false;" id="contact-form">
                     <div class="contact__inputs grid">
                         <div class="contact__content">
                             <label for="" class="contact__label">Name</label>
-                            <input type="text" class="contact__input">
+                            <input type="text" class="contact__input" id="name" >
                         </div>
                         <div class="contact__content">
-                            <label for="" class="contact__label">Email</label>
-                            <input type="email" class="contact__input">
+                            <label  class="contact__label">Email</label>
+                            <input type="email" class="contact__input" id="email" >
                         </div>
                     </div>
 
                     <div class="contact__content">
-                        <label for="" class="contact__label">Project</label>
-                        <input type="text" class="contact__input">
+                        <label class="contact__label">Project</label>
+                        <input type="text" class="contact__input" id="project" >
                     </div>
                     <div class="contact__content">
-                        <label for="" class="contact__label">Message</label>
-                        <textarea name="" id="" cols="0" rows="7" class="contact__input"></textarea>
+                        <label class="contact__label">Message</label>
+                        <textarea id="message" cols="0" rows="7" class="contact__input"></textarea>
                     </div>
 
                     <div>
-                        <a href="#" class="button button--flex">
+                        <button onclick="SendMail()" class="button button--flex" >Send Message</button>
+                        <!-- <a href="" class="button button--flex" id="btn" onclick="SendMail()">
                             Send Message
                             <i class="uil uil-message button__icon"></i>
-                        </a>
+                        </a> -->
                     </div>
                 </form>
             </div>
@@ -690,17 +690,19 @@
                 </ul>
 
                 <div class="footer__social">
-                    <a href="" target="_blank" class="footer__social">
-                        <i class="uil uil-instagram"></i>
+                    
+                    <a href="https://ke.linkedin.com/in/brandon-kiarie-067913277" target="_blank" class="footer__social">
+                        <i class="uil uil-linkedin-alt"></i>
                     </a>
 
-                    <a href="" target="_blank" class="footer__social">
+                    <a href="https://github.com/kiari-e" target="_blank" class="footer__social">
                         <i class="uil uil-github-alt"></i>
                     </a>
 
-                    <a href="" target="_blank" class="footer__social">
-                        <i class="uil uil-linkedin-alt"></i>
+                    <a href="https://www.instagram.com/brandon_kuria11" target="_blank" class="footer__social">
+                        <i class="uil uil-instagram"></i>
                     </a>
+                    
                 </div>
             </div>
 
@@ -718,5 +720,30 @@
     <script src="../js/swiper-bundle.min.js"></script>
     <!-- main js -->
     <script src="../js/main.js"></script>
+    <!-- Receive Email -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    
+    <script type="text/javascript">
+        (function() {
+            // https://dashboard.emailjs.com/admin/account
+            emailjs.init('3b4OhSe3s7DE-GXIO');
+        })();
+    </script>
+
+<script type="text/javascript">
+    //Sending email
+function SendMail(){
+    var params = {
+        name : document.getElementById("name").value,
+        email : document.getElementById("email").value,
+        project : document.getElementById("project").value,
+        message : document.getElementById("message").value
+    }
+    emailjs.send("service_u3xmngi", "template_c4x5his", params).then(function (res){
+        alert("Success!");
+    })
+}
+</script>
+
 </body>
 </html>
