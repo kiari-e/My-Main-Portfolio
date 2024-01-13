@@ -1,1 +1,10 @@
-{ "rewrites": [{ "source": "/(.*)", "destination": "/" }] }
+{ "rewrites": [
+    { "source": "/css/(.*)", "destination": "/assets/css/mystyle.css" },
+    { "source": "/css/(.*)", "destination": "/assets/css/swiper-bundle.min.css" },
+    { "source": "/pdf/(.*)", "destination": "/assets/pdf/Brandon-Resume.pdf" },
+    { "source": "/images/(.*)", "destination": "/assets/images/Brandon.jpeg" },
+    { "source": "/images/(.*)", "destination": "/assets/images/brandonprofile.png" },
+    { "source": "/js/(.*)", "destination": "/assets/js/main.js" },
+    { "source": "/js/(.*)", "destination": "/assets/js/swiper-bundle.min.js" },
+    { "source": "/(.*)", "destination": "/assets/pages/index.html" }
+    ] }
