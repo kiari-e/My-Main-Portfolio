@@ -8,3 +8,5 @@
     { "source": "/js/(.*)", "destination": "/assets/js/swiper-bundle.min.js" },
     { "source": "/(.*)", "destination": "/assets/pages/index.html" }
     ] }
+
+    
