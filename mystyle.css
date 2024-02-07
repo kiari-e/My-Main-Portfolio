@@ -631,6 +631,17 @@ right: -.5rem;
   outline: none;
 }
 
+/* Davis-Cakes */
+.dc__img{
+  width: 100%;
+  height: 350px;
+  border-radius: .5rem;
+  justify-self: center;
+}
+.dc__data{
+  text-align: center;
+}
+
 /* ====================Testimonial====================== */
 .testimonial__data,
 .testimonial__header{
